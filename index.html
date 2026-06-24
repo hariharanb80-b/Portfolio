@@ -1,528 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-
- }
-
- :root {
-    --bg-color:#1f242d;
-    --second-bg-color:#323946;
-    --text-color:#fff;
-    --main-color:#0ef; 
- }
-
- html{
-    font-size: 62.5%;
-    overflow-x:hidden;
-
- }
-
- body{
-    background: var(--bg-color);
-    color: var(--text-color);
- }
-
- section{
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
- }
- .header{
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    padding: 2rem 9%;
-    background: var(--bg-color);
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    z-index:100 ;
-
- }
-
- .header.sticky{
-   border-bottom: .1rem solid rgba(0, 0,0, .2);
- }
- .logo{
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight:600;
-    cursor:default;
- }
- .navbar a {
-    font-size: 1.7rem;
-    color: var(--text-color);
-    margin-left: 4rem;
-    transition: .3s;
- }
-
- .navbar a:hover,
- .navbar a.active{
-    color: var(--main-color);
- }
- #menu-icon{
-    font-size: 3.6rem;
-    color: var(--text-color);
-    display: none;
- }
-
- .home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
-
- .home-img img{
-    width: 300px;
-    border-radius: 20%;
-    animation: slideDown 8s ease;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
- .home-content h3 {
-    font-size: 3.2rem;
-    font-weight: 700;
-
- }
- .home-content h3:nth-of-type(2){
-    margin-bottom: 2rem;
- }
-
- span{
-    color: var(--main-color);
- }
- .home-content h1{
-    font-size: 5.6rem;
-    font-weight: 700;
-    line-height: 1.3;
- }
-
- .social-media a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background: transparent;
-    border: .2rem solid var(--main-color);
-    border-radius: 50%;
-    font-size: 2rem;
-    color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
-    transition: .5s ease;
- }
- .social-media a:hover{
-    background: var(--main-color);
-    color: var(--second-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
- }
-
- .btn {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--main-color);
-    border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.6rem;
-    color: var(--second-bg-color);
-    letter-spacing: .1rem;
-    font-weight: 600;
-    transition: .5s ease;
- }
-
- .btn:hover {
-    box-shadow: none;
- }
-
- .about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    background: var(--second-bg-color);
- }
- .about-img img{
-    width: 35rem;
- }
-
- .heading{
-    text-align: center;
-    font-size: 4.5rem;
- }
-
- .about-content h2{
-    text-align: left;
-    line-height: 1.2;
-    color:#0ef; 
- }
-
- .about-content h3{
-    font-size: 2.6rem;
-    color:darkorchid
- }
-
- .about-content p{
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
- }
- .services h2{
-   margin-bottom: 5rem;
-   color:#0ef; 
-
- }
- .services-container{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   gap: 2rem;
- }
- .services-container .services-box {
-   flex: 1 1 30rem;
-   background: var(--second-bg-color);
-   padding: 3rem 2rem 4rem;
-   border-radius: 2rem;
-   text-align: center;
-   border: .2rem solid var(--bg-color);
-   transition: .5s ease;
- }
- .services-container .services-box:hover{
-   border-color: var(--main-color);
-   transform: scale(1.02);
- }
- .services-box i{
-   font-size: 7rem;
-   color: var(--main-color);
- }
- .services-box h3{
-   font-size: 2.6rem;
- }
- .services-box p{
-   font-size: 1.6rem;
-   margin: 1rem 0 3rem;
- }
- .portfolio{
-   background: var(--second-bg-color);
- }
-.portfolio h2{
-   margin-bottom: 4rem;
-}
-.portfolio{
-   background: var(--second-bg-color);
-}
-
-.portfolio .heading{
-   margin-bottom: 8rem;
-   color:#0ef; 
-}
-
-.portfolio-box{
-   max-width: 1000px;
-   margin: 0 auto;
-   position: relative;
-   border-radius: 2rem;
-   text-align: center;
-   overflow: hidden;
-   box-shadow: 0 0 1rem var(--bg-color);
-}
-
-.portfolio-box img{
-   width: 100%;
-   display: block;
-   border-radius: 2rem;
-}
-
-.portfolio-layer{
-   background: rgba(34, 43, 60, 0.95);
-   padding: 9rem;
-   text-align: center;
-   border-radius: 4rem;
-}
-
-.portfolio-layer h4{
-   font-size: 300px;
-   margin-bottom: 2rem;
-   color: var(--text-color);
-}
-
-.portfolio-layer p{
-   font-size: 1.8rem;
-   line-height: 1.8;
-   color: var(--text-color);
-}.portfolio-box img{
-   width: 100%;
-   transition: .5s ease;
-}
-.portfolio-box:hover img{
-   transform: scale(1.1);
-}
-.portfolio-box .portfolio-layer{
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background: linear-gradient(rgba(0,0,0, .1),var(--main-color));
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   text-align: center;
-   padding: 0 4rem;
-   transform: translateY(100%);
-   transition: .5s ease;
-}
-.portfolio-box:hover .portfolio-layer{
-   transform: translateY(0);
-}
-
-.portfolio-layer h4{
-   font-size: 3.5rem;
-   text-align: center;
-}
-
-.portfolio-layer p{
-   font-size: 3rem;
-   text-align: start;
-   margin: .3rem 0 1rem;
-}
-
-.portfolio-layer a{
-   display: inline-flex;
-   justify-content: center;
-   align-items: center;
-   width: 5rem;
-   height: 5rem;
-   background: var(--text-color);
-   border-radius: 50%;
-}
-
-.portfolio-layer a i {
-   font-size: 2rem;
-   color: var(--second-bg-color);
-}
-
-.contact h2{
-   margin-bottom: 3rem;
-   color:#0ef; 
-}
-
-.contact form{
-   max-width: 70rem;
-   margin: 1rem auto;
-   text-align: center;
-   margin-bottom: 3rem;
-}
-
-.contact form .input-box{
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
-}
-
-.contact form .input-box input,
-.contact form textarea{
-   width: 100%;
-   padding: 1.5rem;
-   font-size: 1.6rem;
-   color: var(--text-color);
-   background: var(--second-bg-color);
-   border-radius: .8rem;
-   margin: .7rem 0;
-}
-
-.contact form .input-box input{
-   width: 49%;
-}
-
-.contact form textarea{
-   resize: none;
-}
-
-.contact form .btn{
-   margin-top: 2rem;
-   cursor: pointer;
-}
-
-.footer{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   flex-wrap: wrap;
-   padding: 2rem 9%;
-   background: var(--second-bg-color);
-}
-
-.footer-text p{
-   font-size: 1.6rem;
-}
-
-.footer-iconTop a{
-   display: inline-flex;
-   justify-content: center;
-   align-items: center;
-   padding: .8rem;
-   background: var(--main-color);
-   border-radius: .8rem;
-   transition: .5s ease;
-}
-
-.footer-iconTop a:hover{
-   box-shadow: 0 0 1rem var(--main-color);
-}
-
-.footer-iconTop a i{
-   font-size: 2.4rem;
-   color: var(--second-bg-color);
-}
-
-@media (max-width:1200px){
-   html{
-      font-size: 55%;
-   }
-}
-
-@media(max-width:991px){
-   .header{
-      padding: 2rem 3%;
-   }
-   section{
-      padding: 10rem 3% 2rem;
-   }
-
-   .services{
-      padding-bottom: 7rem;
-   }
-
-   .portfolio{
-      padding-bottom: 7rem;
-   }
-   .contact{
-      min-height: auto;
-   }
-   .footer{
-      padding: 2rem 3%;
-   }
-}
-
-@media(max-width:768px){
-   #menu-icon{
-      display: block;
-   }
-   .navbar{
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      padding: 1rem 3%;
-      background: var(--bg-color);
-      border-top: .1rem solid rgba(0, 0, 0, .2);
-      box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
-      display: none;
-   }
-
-   .navbar.active{
-      display: block;
-   }
-   .navbar a {
-       display: block;
-       font-size: 2rem;
-       margin: 3rem 0;
-   }
-   .home{
-      flex-direction: column;
-   }
-   .home-content h3{
-      font-size: 2.6rem;
-   }
-   .home-content h1{
-      font-size: 5rem;
-   }
-   .home-img img{
-      width: 70vw;
-      margin-top: 4rem;
-   }
-   .about{
-      flex-direction: column-reverse;
-   }
-
-   .about img{
-      width: 70vw;
-      margin-top: 4rem;
-   }
-   .services h2{
-      margin-bottom: 3rem;
-   }
-
-   .portfolio h2{
-      margin-bottom: 3rem;
-   }
-
-   .portfolio-container{
-      grid-template-columns: repeat(2,1fr);
-   }
-}
-
-@media(max-width:617px){
-   .portfolio-container{
-      grid-template-columns: 1fr;
-   }
-}
-
-@media(max-width:450px){
-   html{
-      font-size: 50%;
-   }
-
-   .contact form .input-box input{
-      width: 100%;
-   }
-}
-
-@media(max-width:365px){
-   .home-img img{
-      width: 90vw;
-   }
-
-   .about-img img{
-      width: 90vw;
-   }
-
-   .footer{
-      flex-direction: column-reverse;
-   }
-
-   .footer p{
-      text-align: center;
-      margin-top: 2rem;
-   }
-}
-
-#msg{
-   color: #61b752;
-   margin-top: -10px;
-   display: block;
-}
-.portfolio .heading {
-    margin-bottom: 2rem;
-}
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>HARIHARAN'S PORTFOLIO </title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!--body-->
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">ABOUT</a>
+                <a href="#services">SERVICES</a>
+                <a href="#portfolio">PORTFOLIO</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </header>
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hello,It's Me</h3>
+                <h1>Hariharan</h1>
+                <h2>Project Manager <a href="https://orznt.com">@orznt</a></h2>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/_harx_haran_?igsh=czhkbzM1c21ydTNw"><i class='bx bxl-instagram' ></i></a>
+                    <a href="mailto:hariharanb80@gmail.com"><i class='bx bxs-envelope'></i></a>
+                    <a href="https://www.linkedin.com/in/hariharan-b-967ab23b0/"><i class='bx bxl-linkedin' ></i></a>
+                </div>
+                <a href="https://drive.google.com/file/d/1oH76RchiROrpvQYuV26dz2oq4eVqKG4F/view?usp=sharing" class="btn">Download CV</a>
+            </div>
+            <div class="home-img">
+                <img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2022/10/computer_engineer-compare-page.jpg" alt="">
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="https://wallpaperaccess.com/full/1385382.jpg" alt="">
+            </div>
+            <div class="about-content">
+                <h2 class="heading">ABOUT ME</h2>
+                <h3>Project Manager</h3>
+                <p>As a Project Manager at ORZNT, I lead the development and delivery of multilingual and AI-driven backend solutions. I manage cross-functional teams including AI engineers, backend developers, and language specialists to ensure scalable, high-performance systems. My projects focus on building intelligent platforms capable of handling multi-language data processing, automation, and advanced analytics. I oversee the complete project lifecycle — from requirement gathering and architecture planning to deployment and client delivery — ensuring timely execution and quality standards. With a strong understanding of AI technologies and backend systems, I bridge the gap between technical teams and business stakeholders to deliver impactful, data-driven solutions. </p>
+                 <a href="#"class="btn">Read More</a>   
+            </div>
+        </section>
+        <section class="services"id="services">
+            <h2 class="heading">Our Services</h2>
+
+            <div class="services-container">
+                <div class="services-box">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Multilingualism</h3>
+                    <p>I have worked on multilingual language extraction projects involving French and Dutch documents. My responsibilities included extracting and organizing key information from structured and semi-structured records while ensuring accuracy and consistency. I handled language-specific formats, special characters, and regional variations to maintain data integrity. I coordinated with backend teams to ensure proper data storage and formatting standards. Through detailed validation and quality checks, I ensured high accuracy in extracted data and smooth processing across multilingual workflows.</p>
+                    <a href="#"class="btn">Read More</a>
+                </div>
+        
+                <div class="services-box">
+                    <i class='bx bx-crop' ></i>
+                    <h3>Ai Backend Development </h3>
+                    <p>I have experience managing AI backend operations for video-based systems, where I coordinated the process of preparing and feeding structured data into AI models. My role involved overseeing data collection, validation, formatting, and integration to ensure seamless processing within the backend infrastructure. I worked closely with developers to manage video data pipelines, optimize performance, and maintain system reliability. I ensured proper data flow, storage management, and quality checks to support accurate AI outputs. Through effective coordination and backend management, I contributed to building scalable and efficient video-driven AI solutions.</p>
+                    <a href="#"class="btn">Read More</a>
+                </div>
+            
+               
+            </div>
+        </section>
+        <section class="portfolio"id="portfolio">
+            <h1 class="heading">Latest Project</h1>
+                <h4>Medical Billing Management System</h4>
+        <p>
+             Developed a comprehensive Medical Billing Management System designed to
+            streamline healthcare billing operations. The system manages patient
+            registration, appointment details, insurance verification, claim
+            submission, invoice generation, payment tracking, and reporting.
+            Implemented features for secure data management, automated claim
+            processing, and real-time billing status updates, helping reduce manual
+            errors and improve operational efficiency. The project focuses on
+            enhancing healthcare administration by providing accurate billing,
+            faster claim processing, and better financial management for hospitals
+            and clinics.
+        </p>
+      <div class="portfolio-box">
+    <div class="portfolio-layer">
+ </div>
+</div>
+        </section>    
+            
+            <section class="contact"id="contact">
+            <h2 class="heading">Contact ME!</h2>
+
+            <form action="#" name="submit-to-google-sheet">
+                <div class="input-box">
+                    <input type="text" name="Name" placeholder="Full Name">
+                    <input type="email" name="Email Address" placeholder="Email Address">
+                </div>
+                <div class="input-box">
+                    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="Mobile Number"placeholder="Mobile Number" maxlength="12">
+                    <input type="text"name="Email Subject" placeholder="Email Subject">
+                </div>
+                <textarea name="Your Message" id="" cols="30" rows="10"placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message"class="btn">
+            </form>
+            <span id="msg"></span>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright &copy; 2026 Hariharan | All Rights Reserved.</p>
+            </div>
+            <div class="footer-iconTop">
+                <a href="#home"><i class='bx bx-up-arrow-alt' ></i></a>
+            </div>
+        </footer>
