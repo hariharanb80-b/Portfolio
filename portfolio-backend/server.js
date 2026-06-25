@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors({
-    origin: '*',//https://hariharan-port-personel.netlify.app/
+    origin: '*',
     methods: ['GET', 'POST'],
 }));
 app.use(bodyParser.json());
